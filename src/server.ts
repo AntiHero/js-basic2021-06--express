@@ -1,5 +1,4 @@
 import app from './index';
-import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import connectDB from './utils/connectDB';
 
@@ -9,7 +8,7 @@ const url = process.env.MONGODB_URI as string;
 
 console.log('connecting to', url);
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
   connectDB(url);
