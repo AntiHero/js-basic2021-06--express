@@ -4,6 +4,7 @@ import requetLogger from './middlewares/logger';
 import bodyParser from 'body-parser';
 import session from 'express-session';
 import './types/index';
+import booksRouter from './controllers/book';
 
 const app = express();
 
@@ -22,6 +23,7 @@ app.use(
 app.use(bodyParser.json());
 app.use(requetLogger);
 app.use(express.static('public'));
+app.use('/api/books', booksRouter);
 
 app.post('/api/counter', (req, res) => {
   const { value } = req.body;
