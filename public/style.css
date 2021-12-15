@@ -1,0 +1,23 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  padding: 40px 20px;
+  background-color: antiquewhite;
+  text-align: center;
+}
+
+h1 {
+  font-size: 42px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
